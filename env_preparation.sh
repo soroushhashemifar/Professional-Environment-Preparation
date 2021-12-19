@@ -35,5 +35,12 @@ conda install -y tensorflow-gpu=$tf_version -c anaconda
 pip install opencv-python
 pip install imageio
 
+# Audio processing
+pip install torchaudio
+pip install librosa
+
 # Production level
 pip install tf2onnx onnx onnxruntime
+
+# Others
+pip install gdown
