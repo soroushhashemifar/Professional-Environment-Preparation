@@ -3,6 +3,7 @@ py_version=3.7
 tf_version=2.4.1
 
 # Prepare Anaconda
+# Skip this part if you have installed Anaconda before
 tar -xvzf /home/$USER/medad/cudnn-10.1-linux-x64-v7.6.5.32.tgz
 sudo cp cuda/include/cudnn.h /usr/lib/cuda/include/
 sudo cp cuda/lib64/libcudnn* /usr/lib/cuda/lib64/
@@ -12,7 +13,6 @@ echo 'export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH' >> ~/.bashr
 source ~/.bashrc
 chmod +x Anaconda3-2020.11-Linux-x86_64.sh
 ./Anaconda3-2020.11-Linux-x86_64.sh
-
 export PATH="/home/$USER/anaconda3/bin:$PATH"
 cd /home/$USER/anaconda3/bin
 ./conda init bash
@@ -26,6 +26,8 @@ conda activate $env_name
 conda install -y -c anaconda python=$py_version
 conda install -y pip
 conda install -y -c conda-forge jupyterlab
+pip install -U scikit-learn
+pip install gdown
 
 # TF and Torch packages
 conda install -y pytorch torchvision torchaudio -c pytorch -c conda-forge
@@ -42,6 +44,3 @@ pip install librosa
 
 # Production level
 pip install tf2onnx onnx onnxruntime
-
-# Others
-pip install gdown
