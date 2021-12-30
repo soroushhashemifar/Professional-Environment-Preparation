@@ -30,6 +30,7 @@ conda install -y -c conda-forge jupyterlab
 # TF and Torch packages
 conda install -y pytorch torchvision torchaudio -c pytorch -c conda-forge
 conda install -y tensorflow-gpu=$tf_version -c anaconda
+conda install -y keras -c conda-forge
 
 # Computer Vision/Graphics
 pip install opencv-python
