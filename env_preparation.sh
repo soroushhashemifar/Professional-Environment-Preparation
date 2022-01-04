@@ -27,7 +27,7 @@ conda install -y -c anaconda python=$py_version
 conda install -y pip
 conda install -y -c conda-forge jupyterlab
 pip install -U scikit-learn
-pip install gdown
+pip install gdown pandas matplotlib
 
 # TF and Torch packages
 conda install -y pytorch torchvision torchaudio -c pytorch -c conda-forge
