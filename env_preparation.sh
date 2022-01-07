@@ -38,6 +38,7 @@ conda install -y keras -c conda-forge
 # Computer Vision/Graphics
 pip install opencv-python
 pip install imageio
+pip install scikit-image
 
 # Audio processing
 pip install torchaudio
